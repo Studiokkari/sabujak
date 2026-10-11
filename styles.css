@@ -343,10 +343,10 @@ button { font: inherit; }
 .package-book { z-index: 3; width: 28%; left: 36%; top: 7.75%; transform: perspective(900px) rotateX(2deg) rotateY(2deg) rotateZ(-2deg); }
 .package-sheet { z-index: 2; width: 36%; right: 1.5%; top: 9.2%; border-radius: 2px; transform: perspective(900px) rotateX(3deg) rotateY(-7deg) rotateZ(4deg); }
 .package-result { z-index: 6; width: 27.5%; bottom: 10%; transform: perspective(900px) rotateX(2deg); filter: drop-shadow(6px 14px 14px rgba(91,53,32,.24)); }
-.package-result-one { left: 6.25%; }
-.package-result-two { left: 26.25%; }
-.package-result-three { width: 23.375%; left: 48.3125%; }
-.package-result-four { width: 33%; right: 3.5%; }
+.package-result-one { left: 6.25%; transform: perspective(900px) rotateX(2deg) rotateZ(-4deg); }
+.package-result-two { left: 30.25%; transform: perspective(900px) rotateX(2deg) rotateZ(-1.5deg); }
+.package-result-three { width: 23.375%; left: 51.3125%; transform: perspective(900px) rotateX(2deg) rotateZ(1.5deg); }
+.package-result-four { width: 33%; right: 5.5%; transform: perspective(900px) rotateX(2deg) rotateZ(4deg); }
 .package-pouch { z-index: 4; width: 23.5%; bottom: 30.5%; filter: drop-shadow(6px 16px 15px rgba(91,53,32,.2)); }
 .package-pouch-one { left: 2.5%; transform: perspective(900px) rotateY(7deg) rotateZ(-6deg); }
 .package-pouch-two { left: 26.5%; transform: perspective(900px) rotateY(3deg) rotateZ(-2deg); }
