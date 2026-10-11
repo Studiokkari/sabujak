@@ -339,14 +339,14 @@ button { font: inherit; }
 }
 .package-glow { position: absolute; width: 470px; height: 420px; top: 42px; left: 50%; border-radius: 50%; background: rgba(255,255,255,.76); filter: blur(20px); transform: translateX(-50%); }
 .package-item { position: absolute; object-fit: contain; transform-origin: center bottom; filter: drop-shadow(8px 18px 18px rgba(91,53,32,.2)); }
-.package-box { z-index: 1; width: 36%; left: 1.5%; top: 7%; transform: perspective(900px) rotateX(2deg) rotateY(7deg) rotateZ(-4deg); }
-.package-book { z-index: 3; width: 28%; left: 36%; top: 7%; transform: perspective(900px) rotateX(2deg) rotateY(2deg) rotateZ(-2deg); }
-.package-sheet { z-index: 2; width: 36%; right: 1.5%; top: 7%; border-radius: 2px; transform: perspective(900px) rotateX(3deg) rotateY(-7deg) rotateZ(4deg); }
-.package-result { z-index: 6; width: 27.5%; bottom: 10.5%; filter: drop-shadow(6px 14px 14px rgba(91,53,32,.24)); }
-.package-result-one { left: -2%; transform: perspective(900px) rotateX(2deg) rotateZ(-5deg); }
-.package-result-two { left: 23%; transform: perspective(900px) rotateX(2deg) rotateZ(2deg); }
-.package-result-three { left: 45.5%; width: 33%; bottom: 8%; transform: perspective(900px) rotateX(2deg) rotateZ(-2deg); }
-.package-result-four { right: -5%; width: 38%; bottom: 3.5%; transform: perspective(900px) rotateX(2deg) rotateZ(5deg); }
+.package-box { z-index: 1; width: 36%; left: 1.5%; top: 5.2%; transform: perspective(900px) rotateX(2deg) rotateY(7deg) rotateZ(-4deg); }
+.package-book { z-index: 3; width: 28%; left: 36%; top: 7.75%; transform: perspective(900px) rotateX(2deg) rotateY(2deg) rotateZ(-2deg); }
+.package-sheet { z-index: 2; width: 36%; right: 1.5%; top: 9.2%; border-radius: 2px; transform: perspective(900px) rotateX(3deg) rotateY(-7deg) rotateZ(4deg); }
+.package-result { z-index: 6; width: 27.5%; bottom: 10%; transform: perspective(900px) rotateX(2deg); filter: drop-shadow(6px 14px 14px rgba(91,53,32,.24)); }
+.package-result-one { left: 6.25%; }
+.package-result-two { left: 26.25%; }
+.package-result-three { width: 23.375%; left: 48.3125%; }
+.package-result-four { width: 33%; right: 3.5%; }
 .package-pouch { z-index: 4; width: 23.5%; bottom: 30.5%; filter: drop-shadow(6px 16px 15px rgba(91,53,32,.2)); }
 .package-pouch-one { left: 2.5%; transform: perspective(900px) rotateY(7deg) rotateZ(-6deg); }
 .package-pouch-two { left: 26.5%; transform: perspective(900px) rotateY(3deg) rotateZ(-2deg); }
