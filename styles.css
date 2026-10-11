@@ -328,6 +328,11 @@ button { font: inherit; }
 .package-box { z-index: 1; width: 40%; left: 30%; top: 8%; transform: rotate(-2deg); }
 .package-book { z-index: 3; width: 28%; left: 13%; top: 42%; transform: rotate(-2deg); }
 .package-sheet { z-index: 2; width: 40%; right: 10%; top: 42%; border-radius: 2px; box-shadow: 0 18px 32px rgba(80,47,29,.16); transform: rotate(1.5deg); }
+.package-result { z-index: 5; width: 21%; bottom: 24%; filter: drop-shadow(0 14px 14px rgba(91,53,32,.2)); }
+.package-result-one { left: 2%; transform: rotate(-5deg); }
+.package-result-two { left: 26.2%; transform: rotate(3deg); }
+.package-result-three { right: 26.2%; transform: rotate(-2deg); }
+.package-result-four { right: 2%; transform: rotate(5deg); }
 .package-pouch { z-index: 4; width: 25%; bottom: 11%; }
 .package-pouch-one { left: 2%; transform: rotate(-4deg); }
 .package-pouch-two { left: 26%; transform: rotate(1.5deg); }
