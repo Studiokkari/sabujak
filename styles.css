@@ -254,10 +254,13 @@ button { font: inherit; }
 .curriculum { background: var(--cream); }
 .section-heading { display: grid; grid-template-columns: 1.05fr .95fr; align-items: end; gap: 70px; }
 .section-heading > p { max-width: 540px; margin: 0 0 6px; color: #71635a; font-size: 17px; }
-.journey { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 72px; padding: 0; list-style: none; }
-.journey-step { position: relative; min-height: 215px; padding: 26px 24px; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--line); }
-.journey-step::after { content: ""; position: absolute; z-index: 3; top: -7px; right: -7px; width: 12px; height: 12px; border: 0; border-radius: 50%; background: var(--yellow); }
-.journey-step:last-child::after { display: none; }
+.journey { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 72px; padding: 0; list-style: none; }
+.journey::before { content: ""; position: absolute; z-index: 0; top: 0; right: 0; left: 0; height: 2px; background: var(--ink); }
+.journey-step { position: relative; z-index: 1; min-height: 215px; padding: 26px 24px; border-bottom: 1px solid var(--line); }
+.journey-step::before,
+.journey-step:last-child::after { content: ""; position: absolute; z-index: 3; top: -5px; width: 12px; height: 12px; border: 0; border-radius: 50%; background: var(--yellow); }
+.journey-step::before { left: -6px; }
+.journey-step:last-child::after { right: -6px; }
 .journey-step b { display: block; font-size: 27px; }
 .journey-step span { display: block; margin: 8px 0 50px; color: var(--yellow-deep); font-weight: 800; }
 .journey-step small { color: #79695f; }
@@ -395,7 +398,10 @@ button { font: inherit; }
   .activities .section-heading { grid-template-columns: 1fr; }
   .value-cards { grid-template-columns: 1fr; }
   .journey { grid-template-columns: 1fr 1fr; }
-  .journey-step::after { display: none; }
+  .journey::before { display: none; }
+  .journey-step { border-top: 2px solid var(--ink); }
+  .journey-step::before,
+  .journey-step:last-child::after { display: none; }
   .month-explorer { grid-template-columns: 1fr; }
   .month-tabs { border-right: 0; border-bottom: 1px solid var(--line); }
   .activity-rail { grid-template-columns: 1fr; }
