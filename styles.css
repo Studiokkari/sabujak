@@ -171,15 +171,15 @@ button { font: inherit; }
 .section h2 { font-size: clamp(38px, 4vw, 62px); }
 .story { padding-top: 110px; background: var(--paper); }
 .story-grid { display: grid; grid-template-columns: .82fr 1.18fr; align-items: start; gap: 90px; }
-.story-heading { position: sticky; top: 130px; align-self: start; }
-.story-body { max-width: 670px; padding-top: 58px; font-size: 20px; }
+.story-heading { position: static; align-self: start; }
+.story-body { max-width: 670px; padding-top: 38px; font-size: 20px; }
 .story-body p { margin: 0 0 28px; }
 .story-body strong { display: block; margin-top: 50px; color: var(--yellow-deep); font-size: 24px; }
 .quote-field {
   position: relative;
   min-height: 550px;
   margin-top: 110px;
-  border: 1px solid var(--line);
+  border: 0;
   border-radius: 38px;
   background: #fff;
   overflow: hidden;
