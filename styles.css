@@ -179,7 +179,7 @@ button { font: inherit; }
   position: relative;
   min-height: 550px;
   margin-top: 110px;
-  border: 0;
+  border: 1px solid var(--yellow);
   border-radius: 38px;
   background: #fff;
   overflow: hidden;
