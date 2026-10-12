@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#ffb611" />
     <meta
       name="description"
-      content="계절과 생활문화 속 익숙한 소재를 손으로 표현하며 일상의 작은 즐거움을 피워내는 시니어 예술놀이, 사부작사부작."
+      content="계절과 생활문화 속 익숙한 소재를 손으로 표현하며 일상의 작은 즐거움을 피어내는 시니어 예술놀이, 사부작사부작."
     />
     <title>사부작사부작 — 손끝에서 피어나는 작은 삶의 순간들</title>
     <link rel="stylesheet" href="./styles.css" />
@@ -208,7 +208,7 @@
         <div class="section-shell section-heading reveal">
           <div>
             <p class="eyebrow">APRIL SAMPLE</p>
-            <h2 id="activities-title">4월 ‘꽃과 정원’으로 보는<br />한 달의 사부작</h2>
+            <h2 id="activities-title">4월 ‘꽃과 정원’<br />으로 보는 한 달의 사부작</h2>
           </div>
           <p>
             매월 하나의 주제를 다섯 가지 방식으로 만나봅니다. 아래에는 결과와 활동 성격만 소개하며,
@@ -319,7 +319,10 @@
           <p class="eyebrow light">START YOUR SMALL BLOOM</p>
           <h2 id="inquiry-title">오늘의 손끝에서<br />무엇을 피어볼까요?</h2>
           <p>사부작사부작의 월간 활동북과 패키지에 대해 궁금한 점을 남겨주세요.</p>
-          <button class="button button-dark" type="button" id="openInquiry">구매·구독 문의하기</button>
+          <div class="inquiry-actions" aria-label="문의 유형 선택">
+            <button class="button button-dark" type="button" data-inquiry="personal">개인 구독 문의</button>
+            <button class="button button-institution" type="button" data-inquiry="institution">복지관·기관 도입 문의</button>
+          </div>
         </div>
       </section>
     </main>
@@ -334,8 +337,8 @@
       <button class="dialog-close" type="button" id="closeInquiry" aria-label="문의창 닫기">×</button>
       <img src="./assets/logo-yellow-stacked.png" alt="사부작사부작" draggable="false" />
       <h2 id="dialog-title">구매·구독 문의</h2>
-      <p>문의 채널은 최종 공개 전에 연결할 예정입니다.</p>
-      <small>연락처 또는 신청 폼이 확정되면 이 버튼에서 바로 연결됩니다.</small>
+      <p id="dialog-description">문의 유형을 확인하고 안내드리겠습니다.</p>
+      <small>문의: yudi@yudidi.kr</small>
     </dialog>
   </body>
 </html>

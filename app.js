@@ -46,7 +46,19 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
 const dialog = document.querySelector("#inquiryDialog");
-document.querySelector("#openInquiry").addEventListener("click", () => dialog.showModal());
+const dialogTitle = document.querySelector("#dialog-title");
+const dialogDescription = document.querySelector("#dialog-description");
+
+document.querySelectorAll("[data-inquiry]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const isInstitution = button.dataset.inquiry === "institution";
+    dialogTitle.textContent = isInstitution ? "복지관·기관 도입 문의" : "개인 구독 문의";
+    dialogDescription.textContent = isInstitution
+      ? "기관 규모와 운영 방식에 맞는 구독 구성을 안내드리겠습니다."
+      : "월간 활동북과 패키지 구독을 안내드리겠습니다.";
+    dialog.showModal();
+  });
+});
 document.querySelector("#closeInquiry").addEventListener("click", () => dialog.close());
 dialog.addEventListener("click", (event) => {
   if (event.target === dialog) dialog.close();
