@@ -371,7 +371,6 @@ button { font: inherit; }
 .inquiry-inner > p:not(.eyebrow) { margin: 26px auto 34px; font-size: 18px; }
 .inquiry-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .button-dark { min-width: 210px; color: #fff; background: var(--ink); box-shadow: none; }
-.button-institution { min-width: 230px; color: var(--ink); background: #fff; box-shadow: none; }
 .site-footer { min-height: 230px; display: grid; place-items: center; align-content: center; gap: 16px; padding: 48px 24px; text-align: center; background: var(--paper); }
 .site-footer > .brand-logo { width: 210px; }
 .site-footer p { margin: 0; color: #7e6c61; }
