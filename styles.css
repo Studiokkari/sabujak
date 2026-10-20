@@ -91,7 +91,7 @@ button { font: inherit; }
 .button small,
 .scroll-cue small { display: block; margin-top: 4px; font-size: 16px; font-weight: 620; letter-spacing: .02em; opacity: .68; line-height: 1.15; }
 .site-nav small,
-.header-cta small { font-size: 12px; }
+.header-cta small { font-size: 16px; }
 .button small { font-size: 16px; }
 .site-nav a::after {
   content: "";
@@ -313,7 +313,7 @@ button { font: inherit; }
 .month-explorer { display: grid; grid-template-columns: .86fr 1.14fr; margin-top: 72px; border: 0; border-radius: 32px; background: #fff; overflow: hidden; box-shadow: none; }
 .month-tabs { display: grid; grid-template-columns: repeat(3, 1fr); padding: 22px; gap: 8px; border-right: 1px solid var(--line); }
 .month-tabs button { display: grid; justify-items: center; padding: 15px 10px; border: 0; border-radius: 16px; color: #73665d; background: transparent; cursor: pointer; font-weight: 800; line-height: 1.15; }
-.month-tabs button small { margin-top: 4px; font-size: 12px; font-weight: 600; opacity: .64; }
+.month-tabs button small { margin-top: 4px; font-size: 16px; font-weight: 600; opacity: .64; }
 .month-tabs button:hover { background: var(--cream); }
 .month-tabs button[aria-selected="true"] { color: #fff; background: var(--yellow); box-shadow: none; }
 .month-panel { min-height: 470px; padding: 58px; display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 34px; }
