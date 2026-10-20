@@ -34,16 +34,16 @@ button { font: inherit; }
   color: #8c7d74;
   font-size: 16px;
   font-style: normal;
-  font-weight: 520;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: 1.48;
 }
-.en-heading { margin-top: 16px; font-size: 20px; font-weight: 720; line-height: 1.35; }
+.en-heading { margin-top: 16px; font-size: 18px; font-weight: 500; line-height: 1.35; }
 .en-body { margin-top: 10px; font-size: 16px; }
-.en-card-title { margin-top: 6px; font-size: 16px; font-weight: 700; }
+.en-card-title { margin-top: 6px; font-size: 16px; font-weight: 500; }
 .en-light { color: rgba(255,255,255,.7); }
 .en-accent { color: #bd7f00; }
-.en-eyebrow { display: block; margin-top: 5px; font-size: 16px; font-weight: 750; letter-spacing: .06em; }
+.en-eyebrow { display: block; margin-top: 5px; font-size: 16px; font-weight: 500; letter-spacing: .06em; }
 .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .line-icon { width: 54px; height: 54px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 
@@ -89,7 +89,7 @@ button { font: inherit; }
 .site-nav small,
 .header-cta small,
 .button small,
-.scroll-cue small { display: block; margin-top: 4px; font-size: 16px; font-weight: 620; letter-spacing: .02em; opacity: .68; line-height: 1.15; }
+.scroll-cue small { display: block; margin-top: 4px; font-size: 16px; font-weight: 400; letter-spacing: .02em; opacity: .68; line-height: 1.15; }
 .site-nav small,
 .header-cta small { font-size: 16px; }
 .button small { font-size: 16px; }
@@ -244,7 +244,7 @@ button { font: inherit; }
   font-weight: 650;
   box-shadow: none;
 }
-.speech .en-quote { max-width: 500px; color: #b18b78; font-size: 16px; font-weight: 560; text-align: left; }
+.speech .en-quote { max-width: 500px; color: #b18b78; font-size: 16px; font-weight: 400; text-align: left; }
 .speech::after {
   content: "";
   position: absolute;
@@ -287,8 +287,8 @@ button { font: inherit; }
 .value-cards { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 82px; }
 .value-card { position: relative; min-height: 440px; padding: 34px; border: 0; border-radius: 26px; background: rgba(255,255,255,.09); }
 .value-card span { color: var(--yellow); font-size: 12px; font-weight: 900; }
-.value-card .en-caption { color: rgba(255,255,255,.62); font-size: 16px; font-weight: 520; }
-.value-card h3 .en-caption { font-weight: 680; }
+.value-card .en-caption { color: rgba(255,255,255,.62); font-size: 16px; font-weight: 400; }
+.value-card h3 .en-caption { font-weight: 500; }
 .value-card .line-icon { position: absolute; top: 28px; right: 30px; color: #fff; opacity: .94; }
 .value-card h3 { margin: 58px 0 16px; font-size: 24px; line-height: 1.35; }
 .value-card p { margin: 0; color: rgba(255,255,255,.68); font-size: 17px; }
@@ -304,16 +304,16 @@ button { font: inherit; }
 .journey-step::before { left: -6px; }
 .journey-step:last-child::after { right: -6px; }
 .journey-step b { display: block; font-size: 27px; }
-.journey-step b small { display: block; margin-top: 3px; color: #83736a; font-size: 16px; font-weight: 650; line-height: 1.25; }
+.journey-step b small { display: block; margin-top: 3px; color: #83736a; font-size: 16px; font-weight: 500; line-height: 1.25; }
 .journey-step span { display: block; margin: 8px 0 50px; color: var(--yellow-deep); font-weight: 800; }
-.journey-step span small { display: block; margin-top: 2px; color: #b48c38; font-size: 16px; font-weight: 650; line-height: 1.25; }
+.journey-step span small { display: block; margin-top: 2px; color: #b48c38; font-size: 16px; font-weight: 500; line-height: 1.25; }
 .journey-step small { color: #79695f; }
 .journey-step > small { display: block; font-size: 17px; line-height: 1.45; }
-.journey-step > small em { display: block; margin-top: 5px; color: #a09187; font-size: 16px; font-style: normal; }
+.journey-step > small em { display: block; margin-top: 5px; color: #a09187; font-size: 16px; font-style: normal; font-weight: 400; }
 .month-explorer { display: grid; grid-template-columns: .86fr 1.14fr; margin-top: 72px; border: 0; border-radius: 32px; background: #fff; overflow: hidden; box-shadow: none; }
 .month-tabs { display: grid; grid-template-columns: repeat(3, 1fr); padding: 22px; gap: 8px; border-right: 1px solid var(--line); }
 .month-tabs button { display: grid; justify-items: center; padding: 15px 10px; border: 0; border-radius: 16px; color: #73665d; background: transparent; cursor: pointer; font-weight: 800; line-height: 1.15; }
-.month-tabs button small { margin-top: 4px; font-size: 16px; font-weight: 600; opacity: .64; }
+.month-tabs button small { margin-top: 4px; font-size: 16px; font-weight: 400; opacity: .64; }
 .month-tabs button:hover { background: var(--cream); }
 .month-tabs button[aria-selected="true"] { color: #fff; background: var(--yellow); box-shadow: none; }
 .month-panel { min-height: 470px; padding: 58px; display: grid; grid-template-columns: 100px 1fr; align-items: center; gap: 34px; }
@@ -321,9 +321,9 @@ button { font: inherit; }
 .month-panel p { margin: 0; color: #806e61; }
 .month-panel h3 { margin: 4px 0 18px; font-size: 42px; letter-spacing: -.04em; }
 #month-meaning { color: var(--yellow-deep); font-weight: 900; }
-.month-panel .month-en { color: #9c8d83; font-size: 16px; font-weight: 520; line-height: 1.45; }
-#month-meaning-en { margin-top: 2px; color: #b88928; font-weight: 650; }
-#month-title-en { margin: -13px 0 20px; font-size: 18px; font-weight: 680; }
+.month-panel .month-en { color: #9c8d83; font-size: 16px; font-weight: 400; line-height: 1.45; }
+#month-meaning-en { margin-top: 2px; color: #b88928; font-weight: 500; }
+#month-title-en { margin: -13px 0 20px; font-size: 18px; font-weight: 500; }
 #month-description-en { margin-top: 8px; }
 
 .activities { background: #fff; }
@@ -335,10 +335,10 @@ button { font: inherit; }
 .activity-card img { width: 100%; aspect-ratio: 1.35 / 1; padding: 22px; object-fit: contain; object-position: center; border: 0; background: #faf7f0; }
 .activity-card > div { padding: 28px 30px 32px; }
 .activity-card span { color: var(--rose); font-size: 16px; font-weight: 900; letter-spacing: .04em; }
-.activity-card span small { display: block; margin-top: 3px; color: #b98493; font-size: 16px; font-weight: 650; letter-spacing: .02em; }
+.activity-card span small { display: block; margin-top: 3px; color: #b98493; font-size: 16px; font-weight: 500; letter-spacing: .02em; }
 .activity-card h3 { margin: 8px 0 12px; font-size: 27px; }
 .activity-card p { margin: 0; color: #75665d; }
-.activity-card .en-caption { color: #9a8a80; font-size: 16px; }
+.activity-card .en-caption { color: #9a8a80; font-size: 16px; font-weight: 400; }
 .activity-card-more { grid-column: 1 / -1; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; color: #fff; background: var(--green); }
 .activity-card-more img { height: 100%; aspect-ratio: 1.5 / 1; padding: 0; object-fit: cover; border: 0; }
 .activity-card-more span { color: #dff4b6; }
@@ -361,7 +361,7 @@ button { font: inherit; }
 .book-feature p { display: grid; gap: 4px; margin: 34px 0 0; }
 .book-feature b { font-size: 20px; }
 .book-feature b small,
-.book-feature p span small { display: block; margin-top: 2px; color: #a18d80; font-size: 16px; font-weight: 560; line-height: 1.3; }
+.book-feature p span small { display: block; margin-top: 2px; color: #a18d80; font-size: 16px; font-weight: 400; line-height: 1.3; }
 .book-feature p span { color: #8b776a; font-size: 17px; }
 
 .package { background: var(--paper); }
@@ -404,10 +404,10 @@ button { font: inherit; }
 .package-copy li { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); font-weight: 750; }
 .package-copy li span { color: var(--yellow-deep); font-size: 12px; }
 .package-copy li b { font-weight: 750; }
-.package-copy li b small { display: block; margin-top: 3px; color: #9a8a80; font-size: 16px; font-weight: 520; line-height: 1.3; }
+.package-copy li b small { display: block; margin-top: 3px; color: #9a8a80; font-size: 16px; font-weight: 400; line-height: 1.3; }
 .package-copy small { color: #9a8c82; }
 .package-copy > small { font-size: 17px; }
-.package-copy > small em { display: block; margin-top: 3px; font-size: 16px; font-style: normal; }
+.package-copy > small em { display: block; margin-top: 3px; font-size: 16px; font-style: normal; font-weight: 400; }
 
 .how { color: #fff; background: var(--blue); }
 .how .eyebrow { color: #aad7ff; }
@@ -418,7 +418,7 @@ button { font: inherit; }
 .how-list .line-icon { position: absolute; top: 25px; right: 25px; width: 48px; height: 48px; color: #fff; opacity: .94; }
 .how-list span { margin-top: auto; font-size: 23px; font-weight: 850; }
 .how-list small { margin-top: 6px; color: rgba(255,255,255,.62); font-size: 17px; }
-.how-list em { display: block; margin-top: 3px; color: rgba(255,255,255,.54); font-size: 16px; font-style: normal; font-weight: 560; line-height: 1.35; }
+.how-list em { display: block; margin-top: 3px; color: rgba(255,255,255,.54); font-size: 16px; font-style: normal; font-weight: 400; line-height: 1.35; }
 .how-list span em { font-size: 16px; }
 
 .inquiry { position: relative; display: grid; place-items: center; overflow: hidden; padding: 140px 0; color: #fff; background: var(--yellow); }
@@ -487,7 +487,7 @@ button { font: inherit; }
   .hero-logo { width: 220px; margin-bottom: 38px; }
   .hero h1 { font-size: 44px; }
   .hero-description { font-size: 16px; }
-  .en-heading { font-size: 20px; }
+  .en-heading { font-size: 18px; }
   .en-body { font-size: 16px; }
   .desktop-break { display: none; }
   .hero-actions { flex-direction: column; align-items: stretch; }
