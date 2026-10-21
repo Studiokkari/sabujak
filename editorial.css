@@ -1,0 +1,827 @@
+/*
+ * Sabujak editorial direction
+ * Keeps the existing brand assets and content while introducing a sharper,
+ * image-led rhythm inspired by contemporary editorial brand sites.
+ */
+
+:root {
+  --yellow: #f8b814;
+  --yellow-deep: #d89200;
+  --cream: #f2eee4;
+  --paper: #fbfaf6;
+  --ink: #211b17;
+  --brown: #3b2923;
+  --rose: #c9506f;
+  --blue: #174e85;
+  --green: #456a45;
+  --line: rgba(33, 27, 23, 0.2);
+  --shell: min(1320px, calc(100vw - 88px));
+}
+
+body {
+  background: var(--paper);
+  line-height: 1.62;
+}
+
+.site-header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 86px;
+  padding: 0 max(44px, calc((100vw - 1320px) / 2));
+  grid-template-columns: 230px 1fr auto;
+  gap: 40px;
+  border-radius: 0;
+  color: #fff;
+  background: rgba(27, 22, 19, 0.96);
+  backdrop-filter: blur(18px);
+}
+
+.brand-link .brand-logo {
+  width: 192px;
+  background-image: url("./assets/logo-white-horizontal.png");
+}
+
+.site-nav {
+  justify-content: flex-end;
+  gap: 34px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.site-nav a {
+  justify-items: start;
+}
+
+.site-nav small,
+.header-cta small {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.site-nav a::after {
+  bottom: -10px;
+  height: 1px;
+}
+
+.header-cta {
+  min-width: 130px;
+  padding: 13px 20px 11px;
+  border-radius: 0;
+  color: var(--ink);
+  background: var(--yellow);
+  font-size: 14px;
+}
+
+.header-cta small {
+  color: rgba(33, 27, 23, 0.62);
+}
+
+.hero {
+  min-height: 100svh;
+  padding-top: 86px;
+  background: var(--yellow);
+}
+
+.hero::after {
+  display: none;
+}
+
+.hero-inner {
+  grid-template-columns: minmax(0, 0.88fr) minmax(560px, 1.12fr);
+  gap: 48px;
+  padding: 110px 0 86px;
+}
+
+.hero-logo {
+  display: none;
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.en-eyebrow {
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-size: clamp(64px, 6.2vw, 96px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 .en-heading {
+  margin-top: 28px;
+}
+
+.hero-description {
+  max-width: 610px;
+  margin-top: 42px;
+  font-size: 19px;
+}
+
+.hero-actions {
+  margin-top: 48px;
+  gap: 10px;
+}
+
+.button {
+  min-height: 64px;
+  min-width: 210px;
+  border-radius: 0;
+}
+
+.button-outline {
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: transparent;
+}
+
+.hero-books {
+  min-height: 700px;
+}
+
+.mini-book {
+  width: min(25vw, 350px);
+}
+
+.hero-book-march {
+  left: 0;
+  top: 2%;
+  transform: rotate(-5deg);
+}
+
+.hero-book-july {
+  right: -8%;
+  top: 13%;
+  transform: rotate(5deg);
+}
+
+.hero-book-november {
+  left: 27%;
+  bottom: -5%;
+  transform: rotate(-1deg) scale(1.12);
+}
+
+.scroll-cue {
+  bottom: 30px;
+}
+
+.section {
+  padding: 178px 0;
+}
+
+.section h2,
+.inquiry h2 {
+  font-size: clamp(50px, 5.15vw, 78px);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.en-heading {
+  margin-top: 24px;
+  line-height: 1.32;
+}
+
+.story {
+  padding-top: 178px;
+  background: var(--paper);
+}
+
+.story-grid {
+  grid-template-columns: minmax(390px, 0.9fr) minmax(0, 1.1fr);
+  gap: 120px;
+}
+
+.story-heading {
+  padding-top: 0;
+}
+
+.story-body {
+  max-width: 720px;
+  padding-top: 64px;
+  font-size: 19px;
+}
+
+.story-body p {
+  margin-bottom: 42px;
+}
+
+.story-body strong {
+  margin-top: 68px;
+  font-size: 25px;
+}
+
+.quote-field {
+  min-height: 590px;
+  margin-top: 150px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: #f5f0e6;
+}
+
+.quote-field::before {
+  left: 22px;
+  bottom: -162px;
+  color: rgba(248, 184, 20, 0.22);
+}
+
+.quote-label {
+  left: 0;
+  top: 34px;
+}
+
+.speech {
+  padding: 18px 0 16px;
+  border: 0;
+  border-top: 2px solid var(--yellow-deep);
+  border-radius: 0;
+  background: transparent;
+  font-size: clamp(18px, 1.8vw, 25px);
+  box-shadow: none;
+}
+
+.speech::before,
+.speech::after {
+  display: none;
+}
+
+.speech-one {
+  left: 5%;
+  top: 25%;
+}
+
+.speech-two {
+  right: 3%;
+  top: 43%;
+}
+
+.speech-three {
+  left: 34%;
+  bottom: 11%;
+}
+
+.manifesto {
+  color: #fff;
+  background: var(--ink);
+}
+
+.manifesto-inner {
+  max-width: 1320px;
+  text-align: left;
+}
+
+.brand-bloom {
+  width: 88px;
+  height: auto;
+  margin: 0 0 52px;
+}
+
+.manifesto-inner h2 {
+  max-width: 940px;
+  font-size: clamp(56px, 6vw, 88px);
+}
+
+.manifesto-inner > p:last-child {
+  max-width: 700px;
+  margin: 52px 0 0 auto;
+  font-size: 19px;
+}
+
+.value-cards {
+  gap: 0;
+  margin-top: 120px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.value-card {
+  min-height: 390px;
+  padding: 42px 36px;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0;
+  background: transparent;
+}
+
+.value-card:last-child {
+  border-right: 0;
+}
+
+.value-card h3 {
+  margin-top: 96px;
+  font-size: 28px;
+}
+
+.curriculum {
+  background: #f5f1e8;
+}
+
+.section-heading {
+  align-items: start;
+  gap: 90px;
+}
+
+.section-heading > p {
+  max-width: 610px;
+  padding-top: 110px;
+  font-size: 18px;
+}
+
+.journey {
+  margin-top: 110px;
+}
+
+.journey-step {
+  min-height: 300px;
+  padding: 34px 24px 30px;
+  border-bottom: 0;
+}
+
+.journey-step b {
+  font-size: 30px;
+}
+
+.journey-step span {
+  margin: 14px 0 70px;
+}
+
+.month-explorer {
+  margin-top: 96px;
+  border-radius: 0;
+  color: #fff;
+  background: var(--ink);
+}
+
+.month-tabs {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.month-tabs button {
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.month-tabs button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.month-tabs button[aria-selected="true"] {
+  color: var(--ink);
+  background: var(--yellow);
+}
+
+.month-panel p,
+.month-panel .month-en {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#month-meaning,
+#month-meaning-en {
+  color: var(--yellow);
+}
+
+.activities {
+  background: var(--paper);
+}
+
+.activity-rail {
+  gap: 1px;
+  margin-top: 110px;
+  background: var(--line);
+}
+
+.activity-card {
+  border-radius: 0;
+  background: var(--paper);
+}
+
+.activity-card:hover {
+  transform: none;
+}
+
+.activity-card img {
+  aspect-ratio: 1.48 / 1;
+  padding: 0;
+  object-fit: cover;
+  background: #eee8dd;
+}
+
+.activity-card > div {
+  min-height: 300px;
+  padding: 38px 40px 44px;
+}
+
+.activity-card h3 {
+  margin-top: 22px;
+  font-size: 31px;
+}
+
+.activity-card-more {
+  grid-template-columns: 1.25fr 0.75fr;
+  color: #fff;
+  background: var(--ink);
+}
+
+.activity-card-more img {
+  aspect-ratio: 1.8 / 1;
+}
+
+.books {
+  color: #fff;
+  background: var(--ink);
+}
+
+.books::before {
+  display: none;
+}
+
+.books-copy {
+  max-width: 1320px;
+  text-align: left;
+}
+
+.books-copy p:last-child {
+  max-width: 700px;
+  margin: 44px 0 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.books-copy .en-caption,
+.book-feature b small,
+.book-feature p span small {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.book-feature p span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.book-gallery {
+  gap: 70px;
+  margin-top: 110px;
+}
+
+.book-mockup {
+  transform: none;
+}
+
+.book-feature:nth-child(2) .book-mockup,
+.book-feature:nth-child(3) .book-mockup {
+  transform: none;
+}
+
+.package {
+  background: #f1ece2;
+}
+
+.package-grid {
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 110px;
+}
+
+.package-visual {
+  border-radius: 0;
+  background: #e7ddcf;
+}
+
+.package-copy li {
+  align-items: flex-start;
+  padding: 22px 0;
+  font-weight: 650;
+}
+
+.how {
+  color: #fff;
+  background: var(--ink);
+}
+
+.how .section-heading > p {
+  transform: none;
+}
+
+.how-list {
+  gap: 0;
+  margin-top: 110px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.how-list li {
+  min-height: 360px;
+  padding: 34px 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0;
+  background: transparent;
+}
+
+.how-list li:last-child {
+  border-right: 0;
+}
+
+.inquiry {
+  min-height: 88svh;
+  padding: 170px 0;
+}
+
+.inquiry-inner {
+  max-width: 940px;
+}
+
+.inquiry-inner > .brand-logo {
+  width: 138px;
+  margin-bottom: 52px;
+}
+
+.button-dark {
+  min-width: 260px;
+  border-radius: 0;
+}
+
+.site-footer {
+  min-height: 280px;
+  color: #fff;
+  background: var(--ink);
+}
+
+.site-footer > .brand-logo {
+  width: 200px;
+  background-image: url("./assets/logo-white-horizontal.png");
+}
+
+.site-footer p,
+.site-footer p .en-caption,
+.site-footer small {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.inquiry-dialog {
+  border-radius: 0;
+}
+
+.dialog-close {
+  border-radius: 0;
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --shell: min(100% - 48px, 920px);
+  }
+
+  .site-header {
+    padding: 0 24px;
+    grid-template-columns: 190px 1fr auto;
+    gap: 22px;
+  }
+
+  .site-nav {
+    gap: 20px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mini-book {
+    width: 270px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --shell: min(100% - 40px, 720px);
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding-top: 90px;
+  }
+
+  .hero h1 {
+    max-width: 760px;
+  }
+
+  .hero-books {
+    min-height: 660px;
+  }
+
+  .story-grid,
+  .section-heading,
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: 66px;
+  }
+
+  .story-body,
+  .section-heading > p {
+    padding-top: 0;
+  }
+
+  .value-card {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .value-card:last-child {
+    border-bottom: 0;
+  }
+
+  .package-copy {
+    order: -1;
+  }
+
+  .how-list li:nth-child(2) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --shell: calc(100% - 36px);
+  }
+
+  .site-header {
+    min-height: 72px;
+    padding: 0 16px;
+  }
+
+  .brand-link .brand-logo {
+    width: 138px;
+  }
+
+  .header-cta {
+    min-width: 108px;
+    padding: 10px 12px 9px;
+    font-size: 12px;
+  }
+
+  .header-cta small {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding-top: 72px;
+  }
+
+  .hero-inner {
+    padding: 76px 0 46px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 14vw, 62px);
+  }
+
+  .hero-description {
+    margin-top: 34px;
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    margin-top: 38px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-books {
+    min-height: 470px;
+  }
+
+  .mini-book {
+    width: 205px;
+  }
+
+  .hero-book-march {
+    left: -8%;
+  }
+
+  .hero-book-july {
+    right: -10%;
+  }
+
+  .hero-book-november {
+    left: 20%;
+  }
+
+  .section {
+    padding: 112px 0;
+  }
+
+  .section h2,
+  .inquiry h2 {
+    font-size: 44px;
+  }
+
+  .story {
+    padding-top: 112px;
+  }
+
+  .story-grid,
+  .section-heading,
+  .package-grid {
+    gap: 48px;
+  }
+
+  .story-body {
+    font-size: 17px;
+  }
+
+  .quote-field {
+    min-height: 720px;
+    margin-top: 90px;
+  }
+
+  .quote-label {
+    right: 0;
+  }
+
+  .speech {
+    max-width: 92%;
+  }
+
+  .speech-one {
+    left: 0;
+  }
+
+  .speech-two {
+    right: 0;
+  }
+
+  .speech-three {
+    left: 8%;
+  }
+
+  .manifesto-inner h2 {
+    font-size: 46px;
+  }
+
+  .manifesto-inner > p:last-child {
+    margin-left: 0;
+  }
+
+  .value-cards,
+  .journey,
+  .activity-rail,
+  .book-gallery,
+  .how-list {
+    margin-top: 76px;
+  }
+
+  .journey-step {
+    min-height: 230px;
+  }
+
+  .month-explorer {
+    margin-top: 76px;
+  }
+
+  .month-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .activity-card > div {
+    min-height: 0;
+    padding: 30px 26px 34px;
+  }
+
+  .activity-card-more {
+    grid-template-columns: 1fr;
+  }
+
+  .book-gallery {
+    gap: 82px;
+  }
+
+  .package-visual {
+    width: calc(100% + 36px);
+    margin-left: -18px;
+  }
+
+  .how-list li {
+    min-height: 250px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .how-list li:last-child {
+    border-bottom: 0;
+  }
+
+  .inquiry {
+    min-height: auto;
+    padding: 120px 0;
+  }
+}
