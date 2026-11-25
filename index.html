@@ -34,8 +34,8 @@
     />
     <meta name="twitter:image" content="https://studiokkari.github.io/sabujak/assets/og-share-20261013.png" />
     <title translate="no">Sabujak Sabujak — Small Moments Blooming at Your Fingertips</title>
-    <link rel="stylesheet" href="./styles.css?v=activity-videos-2" />
-    <script src="./app.js?v=activity-videos-2" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=activity-videos-3" />
+    <script src="./app.js?v=activity-videos-3" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -76,14 +76,22 @@
       <a class="brand-link notranslate" href="#top" aria-label="Sabujak Sabujak home" translate="no">
         <span class="brand-logo brand-logo-horizontal brand-logo-yellow-horizontal" role="img" aria-label="사부작사부작"></span>
       </a>
-      <nav class="site-nav" aria-label="주요 메뉴">
-        <a href="#story">이야기<small lang="en">Story</small></a>
-        <a href="#curriculum">12개월<small lang="en">12 Months</small></a>
-        <a href="#activities">활동<small lang="en">Activities</small></a>
-        <a href="#month-explorer">활동 영상<small lang="en">Videos</small></a>
-        <a href="#package">구성<small lang="en">Package</small></a>
+      <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path class="menu-icon-open" d="M4 6h16M4 12h16M4 18h16" />
+          <path class="menu-icon-close" d="m6 6 12 12M18 6 6 18" />
+        </svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="주요 메뉴">
+        <div class="site-nav-links">
+          <a href="#story">이야기<small lang="en">Story</small></a>
+          <a href="#curriculum">12개월<small lang="en">12 Months</small></a>
+          <a href="#activities">활동<small lang="en">Activities</small></a>
+          <a href="#activity-videos">활동 영상<small lang="en">Videos</small></a>
+          <a href="#package">구성<small lang="en">Package</small></a>
+        </div>
+        <a class="header-cta" href="#inquiry">구독 문의<small lang="en">Subscription</small></a>
       </nav>
-      <a class="header-cta" href="#inquiry">구독 문의<small lang="en">Subscription</small></a>
     </header>
 
     <main id="main">
@@ -108,8 +116,8 @@
             </p>
             <div class="hero-actions">
               <a class="button button-light" href="#activities">프로그램 만나보기<small lang="en">Explore the Program</small></a>
-              <a class="button button-outline" href="#inquiry">구독 문의<small lang="en">Subscription Inquiry</small></a>
-              <a class="button button-light hero-videos-link" href="#month-explorer">활동 영상<small lang="en">Activity Videos</small></a>
+              <a class="button button-light" href="#inquiry">구독 문의<small lang="en">Subscription Inquiry</small></a>
+              <a class="button button-light" href="#activity-videos">활동 영상<small lang="en">Activity Videos</small></a>
             </div>
           </div>
 

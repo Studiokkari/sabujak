@@ -117,6 +117,34 @@ videoDialog.addEventListener("close", () => {
   videoPlayer.load();
 });
 
+const menuToggle = document.querySelector("#menu-toggle");
+const siteNav = document.querySelector("#site-nav");
+
+function isSiteMenuOpen() {
+  return menuToggle.getAttribute("aria-expanded") === "true";
+}
+
+function setSiteMenuOpen(open) {
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
+}
+
+menuToggle.addEventListener("click", () => setSiteMenuOpen(!isSiteMenuOpen()));
+
+document.addEventListener("click", (event) => {
+  if (!isSiteMenuOpen() || menuToggle.contains(event.target)) return;
+  if (!siteNav.contains(event.target) || event.target.closest("a")) setSiteMenuOpen(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !isSiteMenuOpen()) return;
+  event.preventDefault();
+  setSiteMenuOpen(false);
+  menuToggle.focus();
+});
+
+window.matchMedia("(max-width: 900px)").addEventListener?.("change", () => setSiteMenuOpen(false));
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
