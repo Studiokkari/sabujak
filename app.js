@@ -145,6 +145,15 @@ document.addEventListener("keydown", (event) => {
 
 window.matchMedia("(max-width: 900px)").addEventListener?.("change", () => setSiteMenuOpen(false));
 
+const backToTop = document.querySelector("#back-to-top");
+
+function updateBackToTop() {
+  backToTop.hidden = window.scrollY < 360;
+}
+
+window.addEventListener("scroll", updateBackToTop, { passive: true });
+updateBackToTop();
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

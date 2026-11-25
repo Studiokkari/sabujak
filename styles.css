@@ -86,17 +86,13 @@ button { font: inherit; }
 .brand-logo-white-stacked { background-image: url("./assets/logo-white-stacked.png"); }
 .brand-link .brand-logo { width: 180px; }
 .menu-toggle { display: none; }
-.site-nav { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; }
-.site-nav-links { display: flex; justify-content: center; gap: 24px; font-size: 14px; font-weight: 700; }
-.site-nav-links a { position: relative; display: grid; justify-items: center; line-height: 1.1; }
-.site-nav-links small,
-.header-cta small,
+.site-nav { display: flex; justify-content: flex-end; align-items: center; gap: 24px; font-size: 14px; font-weight: 700; }
+.site-nav a { position: relative; display: grid; justify-items: center; line-height: 1.1; }
+.site-nav small,
 .button small,
 .scroll-cue small { display: block; margin-top: 4px; font-size: 16px; font-weight: 400; letter-spacing: .02em; opacity: .68; line-height: 1.15; }
-.site-nav-links small,
-.header-cta small { font-size: 16px; }
 .button small { font-size: 16px; }
-.site-nav-links a::after {
+.site-nav a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -106,19 +102,7 @@ button { font: inherit; }
   background: var(--yellow);
   transition: right .25s ease;
 }
-.site-nav-links a:hover::after { right: 0; }
-.header-cta {
-  min-width: 112px;
-  padding: 11px 18px;
-  border-radius: 999px;
-  background: var(--ink);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.05;
-  text-align: center;
-}
-
+.site-nav a:hover::after { right: 0; }
 .hero {
   position: relative;
   min-height: 1020px;
@@ -455,6 +439,31 @@ button { font: inherit; }
 .inquiry-dialog small { color: #8c7c73; }
 .dialog-close { position: absolute; top: 14px; right: 16px; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #f1e8dd; cursor: pointer; font-size: 24px; }
 
+.back-to-top {
+  position: fixed;
+  z-index: 90;
+  right: 16px;
+  bottom: 16px;
+  right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: max(16px, env(safe-area-inset-bottom, 0px));
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 999px;
+  color: #fff;
+  background: var(--ink);
+  box-shadow: 0 3px 12px rgba(52, 42, 36, .22);
+  font-size: .875rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.back-to-top[hidden] { display: none; }
+.back-to-top:hover { background: #4d3c32; }
+.back-to-top:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -483,7 +492,8 @@ button { font: inherit; }
     left: 0;
     display: none;
     grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
+    justify-content: stretch;
+    gap: 2px;
     max-height: min(420px, calc(100vh - 100px));
     max-height: min(420px, calc(100dvh - 100px));
     overflow-y: auto;
@@ -492,10 +502,10 @@ button { font: inherit; }
     border-radius: 24px;
     background: var(--paper);
     box-shadow: 0 10px 28px rgba(52, 42, 36, .14);
+    font-size: 16px;
   }
   .menu-toggle[aria-expanded="true"] + .site-nav { display: grid; }
-  .site-nav-links { display: grid; justify-content: stretch; gap: 2px; font-size: 16px; }
-  .site-nav-links a {
+  .site-nav a {
     min-height: 48px;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
@@ -504,10 +514,9 @@ button { font: inherit; }
     padding: 10px 14px;
     border-radius: 12px;
   }
-  .site-nav-links a:hover { background: #fff1d4; }
-  .site-nav-links a::after { display: none; }
-  .site-nav-links small { margin: 0; font-size: .875rem; }
-  .site-nav .header-cta { padding: 12px 14px; font-size: 1rem; }
+  .site-nav a:hover { background: #fff1d4; }
+  .site-nav a::after { display: none; }
+  .site-nav small { margin: 0; font-size: .875rem; }
   .menu-toggle:focus-visible,
   .site-nav a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
   .brand-link .brand-logo { width: 160px; }
