@@ -34,8 +34,8 @@
     />
     <meta name="twitter:image" content="https://studiokkari.github.io/sabujak/assets/og-share-20261013.png" />
     <title translate="no">Sabujak Sabujak — Small Moments Blooming at Your Fingertips</title>
-    <link rel="stylesheet" href="./styles.css?v=20261020-bilingual-hierarchy" />
-    <script src="./app.js?v=20261020-bilingual" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=activity-videos-1" />
+    <script src="./app.js?v=activity-videos-1" defer></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -80,6 +80,7 @@
         <a href="#story">이야기<small lang="en">Story</small></a>
         <a href="#curriculum">12개월<small lang="en">12 Months</small></a>
         <a href="#activities">활동<small lang="en">Activities</small></a>
+        <a href="#month-explorer">활동 영상<small lang="en">Videos</small></a>
         <a href="#package">구성<small lang="en">Package</small></a>
       </nav>
       <a class="header-cta" href="#inquiry">구독 문의<small lang="en">Subscription</small></a>
@@ -108,6 +109,7 @@
             <div class="hero-actions">
               <a class="button button-light" href="#activities">프로그램 만나보기<small lang="en">Explore the Program</small></a>
               <a class="button button-outline" href="#inquiry">구독 문의<small lang="en">Subscription Inquiry</small></a>
+              <a class="button button-light hero-videos-link" href="#month-explorer">활동 영상<small lang="en">Activity Videos</small></a>
             </div>
           </div>
 
@@ -231,22 +233,22 @@
           <li class="journey-step reveal"><b>기록<small lang="en">Archive</small></b><span>12월<small lang="en">Dec</small></span><small>전시 · 회고 · 마무리<em lang="en">Exhibition · Reflection · Closing</em></small></li>
         </ol>
 
-        <div class="month-explorer section-shell reveal">
+        <div class="month-explorer section-shell reveal" id="month-explorer">
           <div class="month-tabs" role="tablist" aria-label="월별 커리큘럼">
-            <button role="tab" aria-selected="false" data-month="1">1월<small lang="en">Jan</small></button>
-            <button role="tab" aria-selected="false" data-month="2">2월<small lang="en">Feb</small></button>
-            <button role="tab" aria-selected="true" data-month="3">3월<small lang="en">Mar</small></button>
-            <button role="tab" aria-selected="false" data-month="4">4월<small lang="en">Apr</small></button>
-            <button role="tab" aria-selected="false" data-month="5">5월<small lang="en">May</small></button>
-            <button role="tab" aria-selected="false" data-month="6">6월<small lang="en">Jun</small></button>
-            <button role="tab" aria-selected="false" data-month="7">7월<small lang="en">Jul</small></button>
-            <button role="tab" aria-selected="false" data-month="8">8월<small lang="en">Aug</small></button>
-            <button role="tab" aria-selected="false" data-month="9">9월<small lang="en">Sep</small></button>
-            <button role="tab" aria-selected="false" data-month="10">10월<small lang="en">Oct</small></button>
-            <button role="tab" aria-selected="false" data-month="11">11월<small lang="en">Nov</small></button>
-            <button role="tab" aria-selected="false" data-month="12">12월<small lang="en">Dec</small></button>
+            <button type="button" role="tab" id="month-tab-1" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="1">1월<small lang="en">Jan</small></button>
+            <button type="button" role="tab" id="month-tab-2" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="2">2월<small lang="en">Feb</small></button>
+            <button type="button" role="tab" id="month-tab-3" aria-controls="month-panel" aria-selected="true" tabindex="0" data-month="3">3월<small lang="en">Mar</small></button>
+            <button type="button" role="tab" id="month-tab-4" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="4">4월<small lang="en">Apr</small></button>
+            <button type="button" role="tab" id="month-tab-5" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="5">5월<small lang="en">May</small></button>
+            <button type="button" role="tab" id="month-tab-6" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="6">6월<small lang="en">Jun</small></button>
+            <button type="button" role="tab" id="month-tab-7" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="7">7월<small lang="en">Jul</small></button>
+            <button type="button" role="tab" id="month-tab-8" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="8">8월<small lang="en">Aug</small></button>
+            <button type="button" role="tab" id="month-tab-9" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="9">9월<small lang="en">Sep</small></button>
+            <button type="button" role="tab" id="month-tab-10" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="10">10월<small lang="en">Oct</small></button>
+            <button type="button" role="tab" id="month-tab-11" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="11">11월<small lang="en">Nov</small></button>
+            <button type="button" role="tab" id="month-tab-12" aria-controls="month-panel" aria-selected="false" tabindex="-1" data-month="12">12월<small lang="en">Dec</small></button>
           </div>
-          <div class="month-panel" role="tabpanel" aria-live="polite">
+          <div class="month-panel" id="month-panel" role="tabpanel" aria-labelledby="month-tab-3" aria-live="polite" tabindex="0">
             <span id="month-number">03</span>
             <div>
               <p id="month-meaning">피어남</p>
@@ -257,6 +259,38 @@
               <p class="month-en" id="month-description-en" lang="en">Observe the forms and colors of flowers and sprouts to express a scene of spring coming into bloom.</p>
             </div>
           </div>
+
+          <section class="activity-videos" id="activity-videos" aria-labelledby="activity-videos-title">
+            <div class="activity-videos-heading">
+              <h3 id="activity-videos-title">주차별 활동 방법 영상<small class="en-caption" lang="en">Weekly Activity Videos</small></h3>
+              <p class="activity-video-month" aria-live="polite">
+                <span id="activity-video-month">3월호 · 봄과 새싹</span>
+                <small id="activity-video-month-en" lang="en">March · Spring and Sprouts</small>
+              </p>
+            </div>
+            <div class="activity-video-grid">
+              <button class="activity-video-card" type="button" data-video-week="1" aria-haspopup="dialog">
+                <span class="activity-video-card-top"><span>1주차</span><span class="activity-video-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m9 5 11 7-11 7Z"/></svg></span></span>
+                <strong>평면 표현<small lang="en">Week 1 · Flat Expression</small></strong>
+                <span class="activity-video-status">영상 준비 중</span>
+              </button>
+              <button class="activity-video-card" type="button" data-video-week="2" aria-haspopup="dialog">
+                <span class="activity-video-card-top"><span>2주차</span><span class="activity-video-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m9 5 11 7-11 7Z"/></svg></span></span>
+                <strong>종이 조형<small lang="en">Week 2 · Paper Sculpture</small></strong>
+                <span class="activity-video-status">영상 준비 중</span>
+              </button>
+              <button class="activity-video-card" type="button" data-video-week="3" aria-haspopup="dialog">
+                <span class="activity-video-card-top"><span>3주차</span><span class="activity-video-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m9 5 11 7-11 7Z"/></svg></span></span>
+                <strong>생활공예<small lang="en">Week 3 · Everyday Craft</small></strong>
+                <span class="activity-video-status">영상 준비 중</span>
+              </button>
+              <button class="activity-video-card" type="button" data-video-week="4" aria-haspopup="dialog">
+                <span class="activity-video-card-top"><span>4주차</span><span class="activity-video-icon"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="m9 5 11 7-11 7Z"/></svg></span></span>
+                <strong>작가와 작품 탐구<small lang="en">Week 4 · Artist and Artwork Study</small></strong>
+                <span class="activity-video-status">영상 준비 중</span>
+              </button>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -273,6 +307,7 @@
               Each month explores one theme in five different ways.<br />
               Only the results and nature of each activity are introduced here; the actual templates and making sequence are provided in the activity book.
             </small>
+            <a class="activity-video-jump" href="#activity-videos" data-video-month-link="4">4월 활동 영상 보기<small lang="en">April Activity Videos</small></a>
           </p>
         </div>
 
@@ -398,6 +433,26 @@
       <p>손끝에서 피어나는 작은 삶의 순간들.<small class="en-caption" lang="en">Small moments of life blooming at your fingertips.</small></p>
       <small>© 2026 <span class="notranslate" translate="no">사부작사부작</span>. All Rights Reserved. by STUDIO KKARI</small>
     </footer>
+
+    <dialog class="activity-video-dialog" id="activity-video-dialog" aria-labelledby="activity-video-title">
+      <header class="activity-video-dialog-header">
+        <div>
+          <p class="activity-video-context" id="activity-video-context"></p>
+          <h2 id="activity-video-title"></h2>
+          <p class="en-caption" id="activity-video-title-en" lang="en"></p>
+        </div>
+        <form method="dialog">
+          <button class="activity-video-close" type="submit" aria-label="활동 영상 닫기" autofocus>닫기</button>
+        </form>
+      </header>
+      <div class="activity-video-stage">
+        <div id="activity-video-placeholder">
+          <svg aria-hidden="true" width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="5" y="10" width="38" height="28" rx="6"/><path d="m20 17 11 7-11 7Z"/></svg>
+          <p>영상 준비 중<small lang="en">Video coming soon</small></p>
+        </div>
+        <video id="activity-video-player" controls playsinline preload="metadata" hidden></video>
+      </div>
+    </dialog>
 
     <dialog class="inquiry-dialog" id="inquiryDialog" aria-labelledby="dialog-title">
       <button class="dialog-close" type="button" id="closeInquiry" aria-label="문의창 닫기">×</button>

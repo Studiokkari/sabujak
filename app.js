@@ -13,7 +13,8 @@ const months = {
   12: { meaning: "마무리", meaningEn: "Closing", title: "기록과 작품", titleEn: "Records and Artworks", description: "한 해 동안 만든 작품을 돌아보고 작은 전시와 기록으로 마무리합니다.", descriptionEn: "Look back on a year of artworks and close with a small exhibition and record." },
 };
 
-const tabs = document.querySelectorAll("[data-month]");
+const tabs = [...document.querySelectorAll("[data-month]")];
+const monthPanel = document.querySelector("#month-panel");
 const number = document.querySelector("#month-number");
 const meaning = document.querySelector("#month-meaning");
 const meaningEn = document.querySelector("#month-meaning-en");
@@ -22,19 +23,104 @@ const titleEn = document.querySelector("#month-title-en");
 const description = document.querySelector("#month-description");
 const descriptionEn = document.querySelector("#month-description-en");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const month = Number(tab.dataset.month);
-    const content = months[month];
-    tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
-    number.textContent = String(month).padStart(2, "0");
-    meaning.textContent = content.meaning;
-    meaningEn.textContent = content.meaningEn;
-    title.textContent = content.title;
-    titleEn.textContent = content.titleEn;
-    description.textContent = content.description;
-    descriptionEn.textContent = content.descriptionEn;
+const videoMonth = document.querySelector("#activity-video-month");
+const videoMonthEn = document.querySelector("#activity-video-month-en");
+const videoCards = [...document.querySelectorAll("[data-video-week]")];
+const videoDialog = document.querySelector("#activity-video-dialog");
+const videoContext = document.querySelector("#activity-video-context");
+const videoTitle = document.querySelector("#activity-video-title");
+const videoTitleEn = document.querySelector("#activity-video-title-en");
+const videoPlaceholder = document.querySelector("#activity-video-placeholder");
+const videoPlayer = document.querySelector("#activity-video-player");
+
+const monthNames = new Intl.DateTimeFormat("en", { month: "long", timeZone: "UTC" });
+const aprilActivityNames = [
+  { title: "꽃이 모이는 정원", titleEn: "A Garden of Gathered Flowers" },
+  { title: "꽃이 가득한 정원 액자", titleEn: "A Garden Full of Flowers Frame" },
+  { title: "작은 정원 테라리움", titleEn: "A Small Garden Terrarium" },
+  { title: "정원의 색 화병", titleEn: "A Vase in the Colors of the Garden" },
+];
+
+// Add an MP4 URL by month and week when a video is available.
+const videoSources = {};
+
+let activeMonth;
+
+function selectMonth(tab) {
+  activeMonth = Number(tab.dataset.month);
+  const content = months[activeMonth];
+  tabs.forEach((item) => {
+    const selected = item === tab;
+    item.setAttribute("aria-selected", String(selected));
+    item.tabIndex = selected ? 0 : -1;
   });
+  monthPanel.setAttribute("aria-labelledby", tab.id);
+  number.textContent = String(activeMonth).padStart(2, "0");
+  meaning.textContent = content.meaning;
+  meaningEn.textContent = content.meaningEn;
+  title.textContent = content.title;
+  titleEn.textContent = content.titleEn;
+  description.textContent = content.description;
+  descriptionEn.textContent = content.descriptionEn;
+
+  const englishMonth = monthNames.format(new Date(Date.UTC(2026, activeMonth - 1)));
+  videoMonth.textContent = `${activeMonth}월호 · ${content.title}`;
+  videoMonthEn.textContent = `${englishMonth} · ${content.titleEn}`;
+  videoCards.forEach((card) => {
+    const source = videoSources[activeMonth]?.[card.dataset.videoWeek];
+    card.querySelector(".activity-video-status").textContent = source ? "영상 보기" : "영상 준비 중";
+  });
+}
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => selectMonth(tab));
+  tab.addEventListener("keydown", (event) => {
+    const nextIndex = {
+      ArrowLeft: (index - 1 + tabs.length) % tabs.length,
+      ArrowRight: (index + 1) % tabs.length,
+      Home: 0,
+      End: tabs.length - 1,
+    }[event.key];
+    if (nextIndex === undefined) return;
+    event.preventDefault();
+    selectMonth(tabs[nextIndex]);
+    tabs[nextIndex].focus();
+  });
+});
+
+selectMonth(tabs.find((tab) => tab.getAttribute("aria-selected") === "true"));
+
+document.querySelectorAll("[data-video-month-link]").forEach((link) => {
+  link.addEventListener("click", () => {
+    selectMonth(tabs.find((tab) => tab.dataset.month === link.dataset.videoMonthLink));
+  });
+});
+
+videoCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const week = Number(card.dataset.videoWeek);
+    const weekTitle = card.querySelector("strong");
+    const activity = activeMonth === 4 ? aprilActivityNames[week - 1] : null;
+    const source = videoSources[activeMonth]?.[week];
+
+    videoContext.textContent = `${videoMonth.textContent} · ${week}주차`;
+    videoTitle.textContent = activity?.title ?? weekTitle.firstChild.textContent;
+    videoTitleEn.textContent = activity?.titleEn ?? weekTitle.querySelector("small").textContent;
+    videoPlaceholder.hidden = Boolean(source);
+    videoPlayer.hidden = !source;
+    if (source) videoPlayer.src = source;
+    videoDialog.showModal();
+  });
+});
+
+videoDialog.addEventListener("click", (event) => {
+  if (event.target === videoDialog) videoDialog.close();
+});
+videoDialog.addEventListener("close", () => {
+  if (!videoPlayer.hasAttribute("src")) return;
+  videoPlayer.pause();
+  videoPlayer.removeAttribute("src");
+  videoPlayer.load();
 });
 
 const revealObserver = new IntersectionObserver(
