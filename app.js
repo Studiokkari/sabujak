@@ -90,12 +90,6 @@ tabs.forEach((tab, index) => {
 
 selectMonth(tabs.find((tab) => tab.getAttribute("aria-selected") === "true"));
 
-document.querySelectorAll("[data-video-month-link]").forEach((link) => {
-  link.addEventListener("click", () => {
-    selectMonth(tabs.find((tab) => tab.dataset.month === link.dataset.videoMonthLink));
-  });
-});
-
 videoCards.forEach((card) => {
   card.addEventListener("click", () => {
     const week = Number(card.dataset.videoWeek);
